@@ -1,0 +1,19 @@
+.popularProductBlock {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 4vw;
+  overflow: hidden; }
+  .popularProductBlock a {
+    text-decoration: none;
+    color: black; }
+  .popularProductBlock img {
+    width: 85%;
+    border-radius: 1vw;
+    transition: all 1s ease-out; }
+
+.popularProductBlock img:hover {
+  transform: scale(1.1); }
+
+/*# sourceMappingURL=PopularProductsBlock.module.css.map */

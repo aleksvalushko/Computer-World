@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,MAAM;EACF,SAAS,EAAE,KAAK;;AAEpB,KAAK;EACD,eAAe,EAAE,IAAI;EACrB,OAAO,EAAE,WAAW;EACpB,WAAW,EAAE,CAAC;EACd,OAAC;IACG,eAAe,EAAE,IAAI;IACrB,KAAK,EAAE,IAAI;;AAEnB,aAAa;EACT,KAAK,EAAE,OAAO",
+"sources": ["Information.module.sass"],
+"names": [],
+"file": "Information.module.css"
+}

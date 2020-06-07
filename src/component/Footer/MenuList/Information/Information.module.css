@@ -1,0 +1,15 @@
+.title {
+  font-size: 1.3vw; }
+
+.list {
+  list-style-type: none;
+  padding: 1vw 0 2vw 0;
+  line-height: 2; }
+  .list a {
+    text-decoration: none;
+    color: gray; }
+
+.list a:hover {
+  color: #ffcc33; }
+
+/*# sourceMappingURL=Information.module.css.map */

@@ -1,0 +1,36 @@
+.pluses {
+  background: #ffcc33;
+  display: flex;
+  flex-direction: row;
+  padding: 1.5vw 0; }
+  .pluses a {
+    text-decoration: none;
+    color: black; }
+
+.item1, .item2, .item3, .item4 {
+  display: flex;
+  justify-content: space-between;
+  margin: 1vw 1vw;
+  width: 25%; }
+  .item1 img, .item2 img, .item3 img, .item4 img {
+    margin-right: 1vw;
+    filter: grayscale(100%);
+    width: 90%; }
+
+.icon1, .icon2, .icon3, .icon4 {
+  width: 15%;
+  margin-right: 1vw; }
+
+.item3 img {
+  width: 140%; }
+
+.item1:hover img, .item2:hover img, .item3:hover img, .item4:hover img {
+  filter: grayscale(0); }
+
+.headline1, .headline2, .headline3, .headline4 {
+  font-weight: 700; }
+
+.text1, .text2, .text3, .text4 {
+  font-size: 0.9vw; }
+
+/*# sourceMappingURL=Pluses.module.css.map */

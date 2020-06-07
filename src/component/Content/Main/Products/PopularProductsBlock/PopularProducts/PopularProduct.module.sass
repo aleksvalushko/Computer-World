@@ -1,0 +1,92 @@
+.popularProduct
+    position: relative
+    width: 22%
+    margin: 2vw 1vw
+    button
+        background: #ffcc33
+        border: none
+        font-size: 1.2vw
+        cursor: pointer
+        margin: 0 1%
+
+.description
+    padding: 1vw 0
+    margin: 0.3vw 1vw
+    border-bottom: 1px solid lightgray
+
+.description:hover
+    color: red
+
+.price
+    text-align: left
+    padding-left: 1.5vw
+    font-weight: 600
+
+.popularProduct button:hover
+    color: red
+
+.popularProduct:hover .popularProductIcon1
+    animation: buttonsRotate 0.25s linear 2 forwards
+
+.popularProduct:hover .popularProductIcon2
+    animation: buttonsRotate 0.25s linear 0.25s 2 forwards
+
+.popularProduct:hover .popularProductIcon3
+    animation: buttonsRotate 0.25s linear 0.5s 2 forwards
+
+.popularProduct:hover .popularProductIcon4
+    animation: buttonsRotate 0.25s linear 0.75s 2 forwards
+
+.buttons
+    position: absolute
+    top: 11vw
+    left: 6vw
+    z-index: 1
+    width: 50%
+    visibility: hidden
+
+.popularProductIcon1, .popularProductIcon2, .popularProductIcon3, .popularProductIcon4
+    width: 18%
+    padding: 3% 4%
+    border-radius: 50%
+    position: relative
+    outline: 0
+
+.popularProductIcon1 span, .popularProductIcon2 span, .popularProductIcon3 span, .popularProductIcon4 span
+    display: none
+
+.popularProductIcon1:hover span, .popularProductIcon2:hover span,
+.popularProductIcon3:hover span, .popularProductIcon4:hover span
+    display: inline-block
+    position: absolute
+    bottom: 2.8vw
+    left: -3.5vw
+    width: 10vw
+    padding: 0.5vw 0
+    background: black
+    color: white
+    font-size: 0.8vw
+    border-radius: 0.5vw
+
+.popularProductIcon1 img, .popularProductIcon2 img, .popularProductIcon3 img, .popularProductIcon4 img
+    border-radius: unset
+    filter: brightness(0)
+    transition: none
+
+.popularProductIcon1:hover, .popularProductIcon2:hover, .popularProductIcon3:hover, .popularProductIcon4:hover
+    background: red
+
+.popularProductIcon1:hover img, .popularProductIcon2:hover img,
+.popularProductIcon3:hover img, .popularProductIcon4:hover img
+    filter: brightness(100%)
+
+@keyframes buttonsRotate
+    0%
+        transform: rotateX(0deg)
+    0.1%
+        visibility: visible
+    50%
+        visibility: visible
+    100%
+        transform: rotateX(360deg)
+        visibility: visible

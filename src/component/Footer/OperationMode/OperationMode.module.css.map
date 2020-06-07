@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,cAAc;EACV,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,KAAK;EAChB,WAAW,EAAE,CAAC",
+"sources": ["OperationMode.module.sass"],
+"names": [],
+"file": "OperationMode.module.css"
+}

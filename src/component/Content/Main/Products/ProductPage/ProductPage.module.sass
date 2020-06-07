@@ -1,0 +1,174 @@
+@import "variables.module"
+
+.productSpecifications
+  display: flex
+  flex-direction: column
+
+.productSpecificationsButtons
+  display: flex
+  justify-content: center
+  margin-bottom: 3%
+
+.productSpecificationsButton1
+  border: 1px solid #ebebeb
+  background-color: white
+  color: black
+  width: 14%
+  @include specificationsButton
+
+.productSpecificationsButton2
+  border: 1px solid #ebebeb
+  background-color: white
+  color: black
+  width: 14%
+  @include specificationsButton
+
+.productSpecificationsRedButton
+  background-color: #f1383e
+  color: white
+
+.productContainer
+  display: flex
+  justify-content: space-between
+  padding: 2%
+
+.productAside
+  width: 20%
+  padding: 1%
+  img
+    width: 100%
+
+.productBlocks
+  width: 75%
+
+.productPath
+  background-color: #f4f4f4
+  height: 7vh
+  display: flex
+  align-items: center
+  padding-left: 2%
+  margin-bottom: 2%
+  cursor: pointer
+
+.productPath:active
+  color: #f1383e
+
+.productBlock
+  display: flex
+  justify-content: space-between
+  margin-bottom: 5%
+
+.productImages
+  display: flex
+  flex-direction: column
+  width: 48%
+
+.productMainImage
+  margin-bottom: 4%
+  img
+    width: 100%
+
+.productImage
+  display: flex
+  justify-content: space-between
+  width: 80%
+  cursor: pointer
+  img
+    width: 90%
+
+.productDescription
+  width: 48%
+
+.productTitle
+  font-size: 1.5vw
+  padding-bottom: 2%
+  margin-bottom: 2%
+  border-bottom: 1px solid #ebebeb
+
+.productText
+  color: #a4a4a4
+  margin-bottom: 2%
+
+.productLevel
+  margin-bottom: 2%
+
+.productPrice
+  font-size: 2vw
+  margin-bottom: 4%
+
+.productCountTitle
+  font-size: 0.9vw
+  font-weight: 600
+  margin-bottom: 1%
+
+.productCountNumber
+  display: flex
+  align-items: center
+  margin-bottom: 4%
+  input
+    width: 12.5%
+    height: 5vh
+    text-align: center
+    border: none
+    outline: none
+    font-size: 1.5vw
+    background-color: #f4f4f4
+  button
+    width: 7.5%
+    height: 5.2vh
+    border: none
+    font-size: 2vw
+    color: white
+    background-color: #020201
+    outline: none
+    cursor: pointer
+
+.productDescriptionButtons
+  display: flex
+
+.productDescriptionButton1
+  background-color: #f1383e
+  @include descriptionButton
+
+.productDescriptionButton1:hover
+  background-color: #ffcc33
+  color: black
+
+.productDescriptionButton2
+  background-color: #ce2fff
+  @include descriptionButton
+
+
+.productDescriptionButton2:hover
+  background-color: #ffcc33
+
+.productDescriptionButton3
+  width: 6%
+  height: 4.5vh
+  border: none
+  border-radius: 50%
+  background-color: black
+  outline: none
+  margin-left: 2%
+  cursor: pointer
+  img
+    width: 90%
+  span
+    display: none
+
+.productDescriptionButton3:hover span
+  display: inline-block
+  position: relative
+  bottom: 4vw
+  right: 4.5vw
+  width: 10vw
+  padding: 0.5vw 0
+  background: black
+  color: white
+  font-size: 0.8vw
+  border-radius: 0.5vw
+
+.productDescriptionButton3:hover
+  background-color: #f1383e
+  img
+    padding-top: 30%

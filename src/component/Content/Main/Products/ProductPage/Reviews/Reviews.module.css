@@ -1,0 +1,27 @@
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  padding: 5% 2%;
+  margin-top: 2%;
+  border: 1px solid #ebebeb; }
+  .reviews button {
+    height: 5vh;
+    width: 15%;
+    background-color: #ffcc33;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer; }
+
+.review {
+  display: flex;
+  flex-direction: column; }
+
+.reviewTitle {
+  margin-bottom: 4%;
+  font-size: 2vw; }
+
+.reviewText {
+  color: #a4a4a4; }
+
+/*# sourceMappingURL=Reviews.module.css.map */

@@ -1,0 +1,68 @@
+.slider
+    grid-column: 2 / 3
+    position: relative
+    button
+        display: flex
+        align-items: center
+        justify-content: center
+        position: absolute
+        top: 15vw
+        border: none
+        border-radius: 50%
+        padding: 1.5% 0.3%
+        background: #ffcc33
+        cursor: pointer
+        visibility: hidden
+        outline: none
+    img
+        width: 100%
+        border-radius: 0.5vw
+
+.slider button:hover
+    background: red
+    img
+        filter: brightness(100%)
+
+.slider:hover .arrowLeft
+    animation: onArrowLeft 0.5s linear 1 forwards
+
+
+.slider:hover .arrowRight
+    animation: onArrowRight 0.5s linear 1 forwards
+
+.text
+    position: absolute
+    right: 28vw
+    top: 2vw
+    font-size: 3vw
+
+.arrowLeft
+    img
+      width: 40%
+      filter: brightness(0)
+
+@keyframes onArrowLeft
+    0%
+        left: 0vw
+    100%
+        left: 3vw
+        visibility: visible
+
+@keyframes onArrowRight
+    0%
+        left: 47vw
+    100%
+        left: 44vw
+        visibility: visible
+
+@keyframes slides
+    0%
+        opacity: .1
+    100%
+        opacity: 1
+
+.arrowRight
+    left: 44vw
+    img
+        width: 40%
+        filter: brightness(0)
