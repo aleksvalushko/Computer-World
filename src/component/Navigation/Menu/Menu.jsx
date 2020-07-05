@@ -10,19 +10,20 @@ const Menu = (props) => {
     return (
         <div className={mod.menu}>
             {
-                menu.map((el, index) => {
-                    return (<NavLink to={'/el' + (index + 1)}>
+                menu.map(el => {
+                    return (<NavLink to={el.name}>
                         <div className={mod.item}>{el.name}
-                            <ul className={mod.list}>
+                            <ul className={mod.list} >
                                 {
-                                    el.items.map((el, index) => {
-                                        return <NavLink to={'/item' + (index + 1)}>
+                                    el.items.map(el => {
+                                        return <NavLink to={el}>
                                             <li className={mod.listItem}>{el}</li>
                                         </NavLink>
                                     })
                                 }
                             </ul>
-                            <img src={props.icons.arrowRightRed} alt="arrowRight"/></div>
+                            <img src={props.icons.arrowRightRed} alt="arrowRight" />
+                        </div>
                     </NavLink>);
                 })
             }

@@ -2,7 +2,7 @@ import React from 'react';
 import mod from './Specification.module.sass';
 
 const Specification = () => {
-debugger
+
     return <div >
         <div className={mod.productSpecification}>
             <div className={mod.productSpecificationBlock}>

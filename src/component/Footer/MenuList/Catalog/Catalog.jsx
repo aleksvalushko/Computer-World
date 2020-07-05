@@ -1,6 +1,6 @@
 import React from 'react';
 import mod from './Catalog.module.sass';
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 const Catalog = (props) => {
 
@@ -11,9 +11,9 @@ const Catalog = (props) => {
             <div className={mod.title}>КАТАЛОГ</div>
             <ul className={mod.list}>
                 {
-                    catalog.map(el => <Link>
+                    catalog.map(el => <NavLink to={el}>
                         <li>{el}</li>
-                    </Link>)
+                    </NavLink>)
                 }
             </ul>
         </div>

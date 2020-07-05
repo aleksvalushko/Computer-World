@@ -17,7 +17,7 @@ const Footer = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-           footer: state.footer.footer
+        footer: state.footer.footer
     }
 };
 

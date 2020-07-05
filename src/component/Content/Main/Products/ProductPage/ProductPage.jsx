@@ -10,14 +10,17 @@ const ProductPage = (props) => {
     let id = props.match.params.id;
     let productId = id - 1;
     let products = props.products;
+
+    let [countValue, setCountValue] = useState(1);
+    let [editMode, setEditMode] = useState(true);
+
     let minusCount = () => {
         setCountValue(--countValue);
     };
+
     let plusCount = () => {
         setCountValue(++countValue);
     };
-    let [countValue, setCountValue] = useState(1);
-    let [editMode, setEditMode] = useState(true);
 
     let changeSpecification = () => {
         setEditMode(true);
@@ -78,9 +81,9 @@ const ProductPage = (props) => {
                 <div className={mod.productSpecifications}>
                     <div className={mod.productSpecificationsButtons}>
                         <NavLink className={buttonEditMode1}
-                                 onClick={ () => changeSpecification()}>ХАРАКТЕРИСТИКИ</NavLink>
+                                 onClick={() => changeSpecification()}>ХАРАКТЕРИСТИКИ</NavLink>
                         <NavLink className={buttonEditMode2}
-                                 onClick={ () => changeReviews()}>ОТЗЫВЫ</NavLink>
+                                 onClick={() => changeReviews()}>ОТЗЫВЫ</NavLink>
                     </div>
                     {editMode && <Specification changeSpecification={changeSpecification}/>}
                     {!editMode && <Reviews changeReviews={changeReviews}/>}
@@ -92,11 +95,13 @@ const ProductPage = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  return {
-      products: state.products.products,
-      navigation: state.navigation.navigation,
-      icons: state.icons.icons
-  }
+    return {
+        products: state.products.products,
+        navigation: state.navigation.navigation,
+        icons: state.icons.icons
+    }
 };
 
-export default withRouter(connect(mapStateToProps)(ProductPage));
+let WithRouterProductPage = withRouter(ProductPage);
+
+export default connect(mapStateToProps)(WithRouterProductPage);

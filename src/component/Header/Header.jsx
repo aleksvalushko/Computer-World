@@ -4,7 +4,6 @@ import {Link} from "react-router-dom";
 import {connect} from "react-redux";
 
 const Header = (props) => {
-debugger
     return (
         <div className={mod.header}>
             <div className={mod.contacts}>
