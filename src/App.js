@@ -17,3 +17,5 @@ const App = () => {
         </div>);
 };
 export default App;
+
+// с версией react-router-dom выше, чем 5.0.0, возникает проблема с роутами

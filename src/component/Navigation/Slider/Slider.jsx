@@ -26,11 +26,12 @@ const Slider = (props) => {
 
     return (
         <div className={mod.slider}>
-            <img src={slide[index].image} alt="slider1"/><span className={mod.text}>{slide[index].text}</span>
-            <button className={mod.arrowLeft} onClick={changeSlideBack}><img src={icons.arrowLeftSlider}
-                                                                             alt="arrowLeft"/></button>
-            <button className={mod.arrowRight} onClick={changeSlideForward}><img src={icons.arrowRightSlider}
-                                                                                 alt="arrowRight"/></button>
+            <img src={slide[index].image} alt={`${slide[index].text}`}/>
+            <span className={mod.text}>{slide[index].text}</span>
+            <button className={mod.arrowLeft} onClick={changeSlideBack}>
+                <img src={icons.arrowLeftSlider} alt="arrowLeft"/></button>
+            <button className={mod.arrowRight} onClick={changeSlideForward}>
+                <img src={icons.arrowRightSlider} alt="arrowRight"/></button>
         </div>);
 };
 

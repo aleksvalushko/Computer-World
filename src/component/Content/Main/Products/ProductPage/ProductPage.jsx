@@ -43,8 +43,9 @@ const ProductPage = (props) => {
                 <div className={mod.productPath}>Главная - Ноутбуки - Macbook</div>
                 <div className={mod.productBlock}>
                     <div className={mod.productImages}>
-                        <div className={mod.productMainImage}><img src={products[productId].imageMain} alt="product"
-                                                                   title={products[productId].title}/></div>
+                        <div className={mod.productMainImage}>
+                            <img src={products[productId].imageMain} alt="product" title={products[productId].title}/>
+                        </div>
                         <div className={mod.productImage}>
                             <div><img src={products[productId].imageMain} alt="product"
                                       title={products[productId].title}/></div>
@@ -63,7 +64,9 @@ const ProductPage = (props) => {
                         <div className={mod.productCount}>
                             <div className={mod.productCountTitle}>Количество</div>
                             <div className={mod.productCountNumber}>
-                                <button onClick={minusCount}>-</button>
+                                {countValue <= 0
+                                    ? <button onClick={minusCount} disabled>-</button>
+                                    : <button onClick={minusCount}>-</button>}
                                 <input type="text" value={countValue}/>
                                 <button onClick={plusCount}>+</button>
                             </div>
