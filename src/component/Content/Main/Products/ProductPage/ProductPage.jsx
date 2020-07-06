@@ -75,7 +75,7 @@ const ProductPage = (props) => {
                             <button className={mod.productDescriptionButton1}>В КОРЗИНУ</button>
                             <button className={mod.productDescriptionButton2}>БЫСТРЫЙ ЗАКАЗ</button>
                             <button className={mod.productDescriptionButton3}>
-                                <img src={props.icons.scalesWhite} alt="scales" title='Добавить в сравнение'/>
+                                <img src={props.icons.scalesWhite} alt="scales"/>
                                 <span>Добавить в сравнение</span>
                             </button>
                         </div>
@@ -84,9 +84,9 @@ const ProductPage = (props) => {
                 <div className={mod.productSpecifications}>
                     <div className={mod.productSpecificationsButtons}>
                         <NavLink className={buttonEditMode1}
-                                 onClick={() => changeSpecification()}>ХАРАКТЕРИСТИКИ</NavLink>
+                                 onClick={() => changeSpecification()} to=''>ХАРАКТЕРИСТИКИ</NavLink>
                         <NavLink className={buttonEditMode2}
-                                 onClick={() => changeReviews()}>ОТЗЫВЫ</NavLink>
+                                 onClick={() => changeReviews()} to=''>ОТЗЫВЫ</NavLink>
                     </div>
                     {editMode && <Specification changeSpecification={changeSpecification}/>}
                     {!editMode && <Reviews changeReviews={changeReviews}/>}

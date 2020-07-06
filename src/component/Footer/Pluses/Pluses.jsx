@@ -8,21 +8,21 @@ const Pluses = (props) => {
 
     return (
         <div className={mod.pluses}>
-            <Link className={mod.item1}>
+            <Link className={mod.item1} to=''>
                 <div className={mod.icon1}><img src={footerIcons[0]} alt="check"/></div>
                 <div className={mod.textBlock1}>
                     <div className={mod.headline1}>ГАРАНТИЯ КАЧЕСТВА</div>
                     <div className={mod.text1}>Мы продаем сертифицированный товар с гаранитией сервисных центров.</div>
                 </div>
             </Link>
-            <Link className={mod.item2}>
+            <Link className={mod.item2} to=''>
                 <div className={mod.icon2}><img src={footerIcons[1]} alt="like"/></div>
                 <div className={mod.textBlock2}>
                     <div className={mod.headline2}>ЧЕСТНЫЕ ЦЕНЫ</div>
                     <div className={mod.text2}>Все цены, указанные на сайте, действительны и актуальны.</div>
                 </div>
             </Link>
-            <Link className={mod.item3}>
+            <Link className={mod.item3} to=''>
                 <div className={mod.icon3}><img src={footerIcons[2]} alt="shield"/></div>
                 <div className={mod.textBlock3}>
                     <div className={mod.headline3}>НАДЕЖНЫЙ СЕРВИС</div>
@@ -31,7 +31,7 @@ const Pluses = (props) => {
                     </div>
                 </div>
             </Link>
-            <Link className={mod.item4}>
+            <Link className={mod.item4} to=''>
                 <div className={mod.icon4}><img src={footerIcons[3]} alt="smile"/></div>
                 <div className={mod.textBlock4}>
                     <div className={mod.headline4}>ИНДИВИДУАЛЬНЫЙ ПОДХОД</div>

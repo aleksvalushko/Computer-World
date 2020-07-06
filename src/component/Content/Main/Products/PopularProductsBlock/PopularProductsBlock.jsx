@@ -1,6 +1,6 @@
 import React from 'react';
 import mod from './PopularProductsBlock.module.sass';
-import PopularProducts from "./PopularProducts/PopularProduct";
+import PopularProducts from "./PopularProducts/PopularProducts";
 import ProductPage from "../ProductPage/ProductPage";
 import {Route} from "react-router-dom";
 

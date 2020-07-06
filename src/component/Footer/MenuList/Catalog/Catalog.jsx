@@ -11,7 +11,7 @@ const Catalog = (props) => {
             <div className={mod.title}>КАТАЛОГ</div>
             <ul className={mod.list}>
                 {
-                    catalog.map(el => <NavLink to={el}>
+                    catalog.map( (el, index) => <NavLink to={el} key={index}>
                         <li>{el}</li>
                     </NavLink>)
                 }

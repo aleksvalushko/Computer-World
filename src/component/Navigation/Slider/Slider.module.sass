@@ -18,6 +18,20 @@
         width: 100%
         border-radius: 0.5vw
 
+.example-enter
+    opacity: 0.01
+
+.example-enter.example-enter-active
+    opacity: 1
+    transition: opacity 500ms ease-in
+
+.example-leave
+    opacity: 1
+
+.example-leave.example-leave-active
+    opacity: 0.01
+    transition: opacity 300ms ease-in
+
 .slider button:hover
     background: red
     img
@@ -42,7 +56,7 @@
 
 @keyframes onArrowLeft
     0%
-        left: 0vw
+        left: 0
     100%
         left: 3vw
         visibility: visible

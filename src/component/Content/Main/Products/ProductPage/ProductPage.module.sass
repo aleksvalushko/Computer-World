@@ -1,4 +1,4 @@
-@import "variables.module"
+@import "../../../../variables.module"
 
 .productSpecifications
   display: flex
@@ -122,9 +122,12 @@
     background-color: #020201
     outline: none
     cursor: pointer
+    &:hover
+      background: red
 
 .productDescriptionButtons
   display: flex
+  align-items: center
 
 .productDescriptionButton1
   background-color: #f1383e
@@ -143,7 +146,7 @@
   background-color: #ffcc33
 
 .productDescriptionButton3
-  width: 6%
+  width: 6.5%
   height: 4.5vh
   border: none
   border-radius: 50%
@@ -151,18 +154,22 @@
   outline: none
   margin-left: 2%
   cursor: pointer
+  padding-top: 1%
   img
     width: 90%
   span
     display: none
 
 .productDescriptionButton3:hover span
-  display: inline-block
+  display: flex
+  justify-content: center
+  align-items: center
   position: relative
   bottom: 4vw
-  right: 4.5vw
-  width: 10vw
-  padding: 0.5vw 0
+  right: 4vw
+  width: 150px
+  height: 20px
+  padding: 5% 0
   background: black
   color: white
   font-size: 0.8vw
@@ -171,4 +178,4 @@
 .productDescriptionButton3:hover
   background-color: #f1383e
   img
-    padding-top: 30%
+    padding-top: 10%

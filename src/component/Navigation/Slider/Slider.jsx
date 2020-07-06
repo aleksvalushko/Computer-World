@@ -10,18 +10,22 @@ const Slider = (props) => {
     let [index, setIndex] = useState(0);
 
     let changeSlideForward = () => {
-        if (index >= 0 && index < slide.length - 1) {
-            setIndex(++index);
-        } else {
-            setIndex(0);
-        }
+        setTimeout(() => {
+            if (index >= 0 && index < slide.length - 1) {
+                setIndex(++index);
+            } else {
+                setIndex(0);
+            }
+        }, 500);
     };
     let changeSlideBack = () => {
-        if (index < slide.length && (index !== 0)) {
-            setIndex(--index);
-        } else {
-            setIndex(slide.length - 1);
-        }
+        setTimeout(() => {
+            if (index < slide.length && (index !== 0)) {
+                setIndex(--index);
+            } else {
+                setIndex(slide.length - 1);
+            }
+        }, 500);
     };
 
     return (
