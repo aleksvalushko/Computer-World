@@ -84,9 +84,9 @@ const ProductPage = (props) => {
                 <div className={mod.productSpecifications}>
                     <div className={mod.productSpecificationsButtons}>
                         <NavLink className={buttonEditMode1}
-                                 onClick={() => changeSpecification()} to=''>ХАРАКТЕРИСТИКИ</NavLink>
+                                 onClick={() => changeSpecification()}>ХАРАКТЕРИСТИКИ</NavLink>
                         <NavLink className={buttonEditMode2}
-                                 onClick={() => changeReviews()} to=''>ОТЗЫВЫ</NavLink>
+                                 onClick={() => changeReviews()}>ОТЗЫВЫ</NavLink>
                     </div>
                     {editMode && <Specification changeSpecification={changeSpecification}/>}
                     {!editMode && <Reviews changeReviews={changeReviews}/>}

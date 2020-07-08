@@ -11,7 +11,7 @@ const Information = (props) => {
             <div className={mod.title}>ИНФОРМАЦИЯ</div>
             <ul className={mod.list}>
                 {
-                    information.map( (el, index) => <Link to='' key={index}>
+                    information.map( (el, index) => <Link key={index}>
                         <li>{el}</li>
                     </Link>)
                 }

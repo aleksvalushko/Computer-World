@@ -19,9 +19,9 @@ const PopularProduct = (props) => {
     };
 
     return (
-        <div className={mod.popularProduct} onMouseOver={mouseOver} onMouseOut={mouseOut} >
+        <div className={mod.popularProduct} onMouseOver={mouseOver} onMouseOut={mouseOut}>
             <NavLink to={`/ProductPage/${product.id}`}>
-                <img src={isMouseOver ? product.image : product.imageMain} alt="product"/>
+                <img src={isMouseOver ? product.image : product.imageMain} alt="product" className={mod.productImage}/>
                 <div className={mod.description}>{product.title}</div>
                 <div className={mod.price}>{product.price}</div>
                 <div className={mod.buttons}>
