@@ -4,13 +4,15 @@ import productsReducer from "./productsReducer";
 import iconsReducer from "./iconsReducer";
 import newsReducer from "./newsReducer";
 import footerReducer from "./footerReducer";
+import {reducer as formReducer} from "redux-form";
 
 let reducers =combineReducers({
     navigation: navigationReducer,
     products: productsReducer,
     icons: iconsReducer,
     news: newsReducer,
-    footer: footerReducer
+    footer: footerReducer,
+    form: formReducer
     }
 );
 
