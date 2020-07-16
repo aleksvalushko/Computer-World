@@ -1,6 +1,11 @@
 import product1 from "../img/product1.jpeg";
 import product2 from "../img/product2.jpeg";
 
+const ADD_COMMENT = 'CW/PRODUCTS/ADD_COMMENT';
+export const addComment = (name, comment) => (
+    {type: ADD_COMMENT, name, comment}
+);
+
 let initState = {
     products: [
         {
@@ -52,7 +57,7 @@ let initState = {
             comments: []
         },
         {
-            id: 14,
+            id: 5,
             imageMain: product1,
             image: product2,
             title: 'Apple MacBook Pro15',
@@ -64,7 +69,7 @@ let initState = {
             comments: []
         },
         {
-            id: 5,
+            id: 6,
             imageMain: product2,
             image: product1,
             title: 'Apple MacBook Pro15',
@@ -76,7 +81,7 @@ let initState = {
             comments: []
         },
         {
-            id: 6,
+            id: 7,
             imageMain: product1,
             image: product2,
             title: 'Apple MacBook Pro15',
@@ -88,7 +93,7 @@ let initState = {
             comments: []
         },
         {
-            id: 7,
+            id: 8,
             imageMain: product2,
             image: product1,
             title: 'Apple MacBook Pro15',
@@ -100,7 +105,7 @@ let initState = {
             comments: []
         },
         {
-            id: 8,
+            id: 9,
             imageMain: product1,
             image: product2,
             title: 'Apple MacBook Pro15',
@@ -124,7 +129,7 @@ let initState = {
             comments: []
         },
         {
-            id: 9,
+            id: 11,
             imageMain: product1,
             image: product2,
             title: 'Apple MacBook Pro15',
@@ -136,7 +141,7 @@ let initState = {
             comments: []
         },
         {
-            id: 10,
+            id: 12,
             imageMain: product2,
             image: product1,
             title: 'Apple MacBook Pro15',
@@ -148,7 +153,7 @@ let initState = {
             comments: []
         },
         {
-            id: 11,
+            id: 13,
             imageMain: product1,
             image: product2,
             title: 'Apple MacBook Pro15',
@@ -162,8 +167,28 @@ let initState = {
     ]
 };
 
-const productsReducer = (state = initState) => {
-   return state;
+const productsReducer = (state = initState, action) => {
+    switch (action.type) {
+        case ADD_COMMENT:
+            let newComment = {
+                id: 1,
+                name: action.name,
+                comment: action.comment
+            };
+            return {
+                ...state,
+                products: state.products.map(product => {
+                    if(product.id === 1){
+                        return {...product, comments: [newComment, ...product.comments]}
+                    } else {
+                        return product;
+                    }
+
+                })
+            };
+        default:
+            return state;
+    }
 };
 
 export default productsReducer;

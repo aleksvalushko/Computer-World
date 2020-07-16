@@ -7,21 +7,12 @@
   margin-top: 2%
   border: 1px solid #ebebeb
   button
-    height: 5vh
-    width: 15%
-    background-color: #ffcc33
-    border: none
-    border-radius: 20px
-    outline: none
-    cursor: pointer
-    &:hover
-      background-color: #f1383e
-      color: white
-      transition: all .5s
+    @include reviewButton
 
 .review
   display: flex
   flex-direction: column
+  width: 100%
 
 .reviewTitle
   margin-bottom: 4%
@@ -35,24 +26,65 @@
   flex-direction: column
   justify-content: center
   border: 1px solid #ebebeb
-  width: 220%
-  min-height: 90vh
+  width: 95%
+  min-height: 70vh
   padding: 2%
   margin-bottom: 10%
   div
     margin: 1% 0
   input
     height: 30px
-    width: 95%
+    width: 100%
   textarea
-    width: 95%
+    width: 100%
     height: 60px
   button
-    display: flex
-    align-items: center
-    justify-content: center
-    @include descriptionButton
-    width: 150px
-    font-size: 17px
-    font-weight: 300
-    color: black
+    @include reviewButton
+
+.newReview
+  display: flex
+  flex-direction: column
+  border: 1px solid #ebebeb
+  padding: 2%
+  width: 95%
+  button
+    @include reviewButton
+
+.newReviewBlock
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+
+.newReviewTitleBlock
+  display: flex
+  flex-direction: column
+  height: 70px
+  justify-content: space-between
+
+.newReviewTitle
+  font-size: 30px
+  font-weight: 500
+
+.newReviewTitleText
+  font-size: 17px
+  font-weight: 400
+  color: #a4a4a4
+
+.reviewComments
+  margin-top: 2%
+  border: 1px solid #ebebeb
+  min-height: 30px
+  padding: 2%
+  width: 95%
+
+.authorName
+  font-size: 15px
+  text-decoration: underline
+  margin-bottom: 10px
+  font-weight: 600
+
+.comment
+  font-size: 13px
+  text-wrap: normal
+  word-wrap: break-word
