@@ -1,14 +1,14 @@
 import React from 'react';
 import mod from './Navigation.module.sass';
 import Menu from "./Menu/Menu";
-import Slider from "./Slider/Slider";
 import Aside from "./Aside/Aside";
+import Sliders from "./Slider/Slider";
 
 const Navigation = () => {
     return (
         <div className={mod.navigation}>
             <Menu />
-            <Slider />
+            <Sliders />
             <Aside />
         </div>
     );

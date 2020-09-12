@@ -11,7 +11,7 @@ const App = () => {
     return (
         <div className='appWrapper'>
             <Header/>
-            <Route path='/ContentPage' render={() => <Content/>}/>
+            <Route path='/' exact render={() => <Content/>}/>
             <Route path='/ProductPage/:id?' render={() => <ProductPage/>}/>
             <Footer/>
         </div>);

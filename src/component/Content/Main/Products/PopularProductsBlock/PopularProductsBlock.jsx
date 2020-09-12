@@ -7,7 +7,7 @@ import {Route} from "react-router-dom";
 const PopularProductsBlock = (props) => {
     return (
         <div className={mod.popularProductBlock}>
-            <Route path='/ContentPage' render={ () => <PopularProducts state={props.state}/>}/>
+            <Route path='/' render={ () => <PopularProducts state={props.state}/>}/>
             <Route path='/ProductPage/:id?' render={ () => <ProductPage state={props.state} />}/>
         </div>)
 };

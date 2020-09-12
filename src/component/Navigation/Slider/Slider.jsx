@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import mod from './Slider.module.sass';
 import {connect} from "react-redux";
 
-const Slider = (props) => {
+const Sliders = (props) => {
 
     let slide = props.navigation.slides,
         icons = props.icons;
@@ -16,8 +16,9 @@ const Slider = (props) => {
             } else {
                 setIndex(0);
             }
-        }, 500);
+        }, 300);
     };
+
     let changeSlideBack = () => {
         setTimeout(() => {
             if (index < slide.length && (index !== 0)) {
@@ -25,19 +26,18 @@ const Slider = (props) => {
             } else {
                 setIndex(slide.length - 1);
             }
-        }, 500);
+        }, 300);
     };
 
     return (
         <div className={mod.slider}>
-            <img src={slide[index].image} alt={`${slide[index].text}`}/>
+            <img src={slide[index].image} alt={`${slide[index].text}`} className={mod.mainImage}/>
             <span className={mod.text}>{slide[index].text}</span>
             <button className={mod.arrowLeft} onClick={changeSlideBack}>
                 <img src={icons.arrowLeftSlider} alt="arrowLeft"/></button>
             <button className={mod.arrowRight} onClick={changeSlideForward}>
                 <img src={icons.arrowRightSlider} alt="arrowRight"/></button>
-        </div>);
-};
+        </div>)};
 
 const mapStateToProps = (state) => {
     return {
@@ -46,4 +46,4 @@ const mapStateToProps = (state) => {
     }
 };
 
-export default connect(mapStateToProps)(Slider);
+export default connect(mapStateToProps)(Sliders);

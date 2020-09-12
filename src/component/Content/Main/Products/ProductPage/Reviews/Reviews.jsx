@@ -47,7 +47,7 @@ const Reviews = (props) => {
 
     let comments = props.products.map(el => <Comments comments={el.comments}/>);
     let [isExist, setExist] = useState(true);
-    
+
     let onSetExist = () => {
         setExist(!isExist);
     };
@@ -64,7 +64,9 @@ const Reviews = (props) => {
                     <div className={mod.newReviewBlock}>
                         <div className={mod.newReviewTitleBlock}>
                             <div className={mod.newReviewTitle}>Отзывы</div>
-                            <div className={mod.newReviewTitleText}>У этого товара нет ни одного отзыва. Вы можете стать первым.</div>
+                            <div className={mod.newReviewTitleText}>У этого товара нет ни одного отзыва. Вы можете стать
+                                первым.
+                            </div>
                         </div>
                         <button onClick={onSetExist}>НАПИСАТЬ ОТЗЫВ</button>
                     </div>
