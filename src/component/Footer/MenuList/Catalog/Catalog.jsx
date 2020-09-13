@@ -5,15 +5,15 @@ import {NavLink} from "react-router-dom";
 const Catalog = (props) => {
 
     let catalog = props.footer;
-
+debugger
     return (
         <div className={mod.catalog}>
             <div className={mod.title}>КАТАЛОГ</div>
-            <ul className={mod.list}>
+            <div className={mod.list}>
                 {
                     catalog.map( (el, index) => <NavLink to={el} key={index}>{el}</NavLink>)
                 }
-            </ul>
+            </div>
         </div>
     );
 };
