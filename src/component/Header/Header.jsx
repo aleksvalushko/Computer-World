@@ -21,7 +21,7 @@ const Header = (props) => {
             <div className={mod.searchBlock}>
                 <Link to='/' className={mod.logo}><img src={props.icons.logo} alt="logo"/>World <span>of Computer</span></Link>
                 <div className={mod.search}>
-                    <input type='text' placeholder='Поиск'/>
+                    <input type='search' placeholder='Поиск'/>
                     <button className={mod.magnifier}><img src={props.icons.search} alt="search"/></button>
                 </div>
                 <div className={mod.actBlock}>
