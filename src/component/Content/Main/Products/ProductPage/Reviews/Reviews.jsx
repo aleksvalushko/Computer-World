@@ -137,19 +137,19 @@ const Reviews = (props) => {
                 </div>
                 : <Formik initialValues={{email: '', name: ''}}
                           validate={values => {
-                              const errors = {};
-                              if(!values.email || !values.name){
-                                  errors.email = 'Required';
-                                  errors.name = 'Required';
-                              } else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)){
-                                  errors.email = 'Invalid email address';
+                              let errors = {};
+                              if (!values.email || !values.name) {
+                                  errors.email = 'Введите Ваш e-mail!';
+                                  errors.name = 'Введите Ваше имя!';
+                              } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
+                                  errors.email = 'Некорректный e-mail!';
                               }
                               return errors;
 
                           }}
                           onSubmit={addNewComment}>
-                    {({isSubmitting, errors}) => (
-                        <div className={mod.reviews}>
+                    {({isSubmitting}) => {
+                        return <div className={mod.reviews}>
                             <div className={mod.review}>
                                 <Form className={mod.reviewForm}>
                                     <div>
@@ -165,23 +165,21 @@ const Reviews = (props) => {
                                         <Field type='textarea' name='comment' placeholder='Оставьте свой комментарий'/>
                                     </div>
                                     <div>
-                                        {/*{ errors.name === ''*/}
-                                        {/*? <label htmlFor="name">Ваше имя <span>*</span></label>*/}
-                                        {/*: <label htmlFor="name" className={mod.errorMessage}>Ваше имя <span>*</span></label>}*/}
-                                        <label htmlFor="name">Ваше имя <span>*</span></label>
-                                        <Field type='text' name='name' placeholder='Алексей Алексеев'/>
-                                        <ErrorMessage name='name' component='div' className={mod.errorMessage}/>
+                                        <label htmlFor="fio">Ваше имя <span>*</span></label>
+                                        <Field type='text' name='fio' placeholder='Алексей Алексеев'/>
+                                        <ErrorMessage name='fio' component='div' className={mod.errorMessage}/>
                                     </div>
                                     <div>
                                         <label htmlFor="e-mail">Ваш e-mail <span>*</span></label>
                                         <Field type='email' name='e-mail' placeholder='jokersmail@gmail.com'/>
-                                        <ErrorMessage name='email' component='div' className={mod.errorMessage}/>
+                                        <ErrorMessage name='e-mail' component='div' className={mod.errorMessage}/>
                                     </div>
                                     <button>Отправить</button>
                                 </Form>
                             </div>
                         </div>
-                    )}
+                    }
+                    }
                 </Formik>}
         </div>
     )
